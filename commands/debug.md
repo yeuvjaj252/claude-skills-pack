@@ -1,95 +1,103 @@
 ---
-description: Systematic debugging specialist. Use when encountering bugs, errors, or unexpected behavior that needs root cause analysis.
+description: Debugging command. Activates DEBUG mode for systematic problem investigation.
 ---
 
-# Systematic Debugger
+# /debug - Systematic Problem Investigation
 
-You are a systematic debugging specialist who finds root causes, not just symptoms.
-
-## Problem to Debug
 $ARGUMENTS
 
 ---
 
-## Debugging Protocol
+## Purpose
 
-### Phase 1: Reproduce & Understand
-1. **Get exact error message** - Copy full stack trace
-2. **Identify trigger** - What action causes the bug?
-3. **Check recency** - When did it last work? What changed?
-4. **Environment check** - Dev/Prod? Which browser/OS?
-
-### Phase 2: Hypothesis Generation
-Based on error type, generate hypotheses:
-
-| Error Type | Common Causes |
-|------------|---------------|
-| **TypeError** | null/undefined access, wrong type passed |
-| **ReferenceError** | Variable not declared, scope issue |
-| **NetworkError** | CORS, wrong URL, server down |
-| **SyntaxError** | JSON parse, missing bracket |
-| **State Bug** | Race condition, stale closure |
-
-### Phase 3: Systematic Investigation
-```
-1. Read error message carefully
-2. Check the file:line mentioned in stack trace
-3. Add console.log at key points
-4. Check network tab for API issues
-5. Verify data flow step by step
-```
-
-### Phase 4: Fix & Verify
-1. Make minimal fix
-2. Test the fix
-3. Check for side effects
-4. Add test to prevent regression
+This command activates DEBUG mode for systematic investigation of issues, errors, or unexpected behavior.
 
 ---
 
-## Quick Diagnosis Checklist
+## Behavior
 
-- [ ] Read the FULL error message
-- [ ] Check git diff - what changed recently?
-- [ ] Verify environment variables are set
-- [ ] Check network requests in DevTools
-- [ ] Look for typos in variable/function names
-- [ ] Verify import paths are correct
-- [ ] Check for async/await issues
-- [ ] Look for null/undefined access
+When `/debug` is triggered:
 
----
+1. **Gather information**
+   - Error message
+   - Reproduction steps
+   - Expected vs actual behavior
+   - Recent changes
 
-## Common Bug Patterns
+2. **Form hypotheses**
+   - List possible causes
+   - Order by likelihood
 
-### Frontend
-- **Hydration mismatch**: Server/client render different content
-- **Stale closure**: useCallback/useEffect with missing deps
-- **Race condition**: State updates in wrong order
-- **Key prop issues**: List items missing unique keys
+3. **Investigate systematically**
+   - Test each hypothesis
+   - Check logs, data flow
+   - Use elimination method
 
-### Backend
-- **N+1 queries**: Missing JOIN or include
-- **Unhandled promise**: Missing try/catch or .catch()
-- **Auth bypass**: Missing middleware on route
-- **Type coercion**: String vs Number comparison
+4. **Fix and prevent**
+   - Apply fix
+   - Explain root cause
+   - Add prevention measures
 
 ---
 
 ## Output Format
 
 ```markdown
-## 🐛 Debug Report
+## 🔍 Debug: [Issue]
 
-### Problem
-[Exact error/symptom]
+### 1. Symptom
+[What's happening]
 
-### Root Cause
-[What's actually wrong]
+### 2. Information Gathered
+- Error: `[error message]`
+- File: `[filepath]`
+- Line: [line number]
 
-### Fix
-[Code changes made]
+### 3. Hypotheses
+1. ❓ [Most likely cause]
+2. ❓ [Second possibility]
+3. ❓ [Less likely cause]
 
-### Prevention
-[How to prevent in future]
+### 4. Investigation
+
+**Testing hypothesis 1:**
+[What I checked] → [Result]
+
+**Testing hypothesis 2:**
+[What I checked] → [Result]
+
+### 5. Root Cause
+🎯 **[Explanation of why this happened]**
+
+### 6. Fix
+```[language]
+// Before
+[broken code]
+
+// After
+[fixed code]
 ```
+
+### 7. Prevention
+🛡️ [How to prevent this in the future]
+```
+
+---
+
+## Examples
+
+```
+/debug login not working
+/debug API returns 500
+/debug form doesn't submit
+/debug data not saving
+```
+
+---
+
+## Key Principles
+
+- **Ask before assuming** - get full error context
+- **Test hypotheses** - don't guess randomly
+- **Explain why** - not just what to fix
+- **Prevent recurrence** - add tests, validation

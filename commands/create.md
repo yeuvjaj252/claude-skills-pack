@@ -1,8 +1,8 @@
 ---
-description: Create new application. Triggers interactive dialogue and orchestrates multiple agents to build complete app.
+description: Create new application command. Triggers App Builder skill and starts interactive dialogue with user.
 ---
 
-# Create Application
+# /create - Create Application
 
 $ARGUMENTS
 
@@ -16,23 +16,23 @@ This command starts a new application creation process.
 
 1. **Request Analysis**
    - Understand what the user wants
-   - If information is missing, ask clarifying questions
+   - If information is missing, use `conversation-manager` skill to ask
 
 2. **Project Planning**
-   - Use project-planner approach for task breakdown
+   - Use `project-planner` agent for task breakdown
    - Determine tech stack
    - Plan file structure
    - Create plan file and proceed to building
 
 3. **Application Building (After Approval)**
-   - Coordinate expert domains:
-     - Database design → Schema
-     - Backend development → API
-     - Frontend development → UI
-     - Testing → Quality assurance
+   - Orchestrate with `app-builder` skill
+   - Coordinate expert agents:
+     - `database-architect` → Schema
+     - `backend-specialist` → API
+     - `frontend-specialist` → UI
 
 4. **Preview**
-   - Start development server when complete
+   - Start with `auto_preview.py` when complete
    - Present URL to user
 
 ---
@@ -55,29 +55,5 @@ If request is unclear, ask these questions:
 - What type of application?
 - What are the basic features?
 - Who will use it?
-- Any specific tech stack preferences?
 
-Use sensible defaults, add details later.
-
----
-
-## Tech Stack Decision Tree
-
-| App Type | Recommended Stack |
-|----------|------------------|
-| Simple landing | HTML + Tailwind |
-| Blog/Content | Next.js + MDX |
-| Dashboard/SaaS | Next.js + Prisma + PostgreSQL |
-| E-commerce | Next.js + Stripe + PostgreSQL |
-| Mobile app | React Native + Expo |
-| API only | Hono/Fastify + PostgreSQL |
-
----
-
-## Output
-
-After gathering requirements, create:
-1. `docs/PLAN.md` - Implementation plan
-2. Project scaffolding
-3. Core features
-4. Development server running
+Use defaults, add details later.

@@ -2,7 +2,7 @@
 description: Add or update features in existing application. Used for iterative development.
 ---
 
-# Enhance Application
+# /enhance - Update Application
 
 $ARGUMENTS
 
@@ -15,7 +15,7 @@ This command adds features or makes updates to existing application.
 ### Steps:
 
 1. **Understand Current State**
-   - Explore existing codebase
+   - Load project state with `python .agent/scripts/session_manager.py info`
    - Understand existing features, tech stack
 
 2. **Plan Changes**
@@ -28,16 +28,18 @@ This command adds features or makes updates to existing application.
    "To add admin panel:
    - I'll create 15 new files
    - Update 8 files
-
+   - Takes ~10 minutes
+   
    Should I start?"
    ```
 
 4. **Apply**
-   - Make changes using appropriate expertise
-   - Test changes
+   - Call relevant agents
+   - Make changes
+   - Test
 
 5. **Update Preview**
-   - Hot reload or restart server
+   - Hot reload or restart
 
 ---
 
@@ -50,35 +52,7 @@ This command adds features or makes updates to existing application.
 /enhance add search feature
 /enhance edit profile page
 /enhance make responsive
-/enhance add authentication
-/enhance optimize performance
 ```
-
----
-
-## Change Categories
-
-| Category | Scope | Approval |
-|----------|-------|----------|
-| **Minor** | 1-3 files, simple logic | Proceed directly |
-| **Medium** | 4-10 files, new feature | Brief summary, then proceed |
-| **Major** | 10+ files, architecture change | Detailed plan, wait for approval |
-
----
-
-## Enhancement Checklist
-
-Before enhancing:
-- [ ] Understand existing architecture
-- [ ] Identify all affected files
-- [ ] Check for breaking changes
-- [ ] Plan rollback strategy
-
-After enhancing:
-- [ ] Changes work as expected
-- [ ] No regressions introduced
-- [ ] Tests pass (if applicable)
-- [ ] Code follows existing patterns
 
 ---
 
@@ -86,5 +60,4 @@ After enhancing:
 
 - Get approval for major changes
 - Warn on conflicting requests (e.g., "use Firebase" when project uses PostgreSQL)
-- Maintain consistency with existing code style
-- Don't refactor unrelated code
+- Commit each change with git

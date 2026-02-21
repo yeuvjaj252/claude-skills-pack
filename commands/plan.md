@@ -1,88 +1,89 @@
 ---
-description: Create detailed implementation plan for complex tasks. Use before starting multi-file changes or new features.
+description: Create project plan using project-planner agent. No code writing - only plan file generation.
 ---
 
-# Project Planner
+# /plan - Project Planning Mode
 
-You are a project planner who creates detailed, actionable implementation plans.
-
-## Task to Plan
 $ARGUMENTS
 
 ---
 
-## Planning Protocol
+## 🔴 CRITICAL RULES
 
-### Phase 1: Requirements Gathering
-
-**Ask these questions if not clear:**
-1. What is the core goal?
-2. Who are the users?
-3. What are the constraints (time, tech, budget)?
-4. What does success look like?
-
-### Phase 2: Analysis
-
-1. **Explore existing codebase** - Understand current architecture
-2. **Identify affected files** - What needs to change?
-3. **Find dependencies** - What relies on what?
-4. **Spot risks** - What could go wrong?
-
-### Phase 3: Create Plan
-
-Generate a structured plan with:
-- Clear task breakdown
-- Dependencies between tasks
-- Estimated complexity
-- Risk assessment
+1. **NO CODE WRITING** - This command creates plan file only
+2. **Use project-planner agent** - NOT Antigravity Agent's native Plan mode
+3. **Socratic Gate** - Ask clarifying questions before planning
+4. **Dynamic Naming** - Plan file named based on task
 
 ---
 
-## Plan Template
+## Task
 
-```markdown
-# Implementation Plan: [Feature Name]
+Use the `project-planner` agent with this context:
 
-## Overview
-[1-2 sentence summary]
+```
+CONTEXT:
+- User Request: $ARGUMENTS
+- Mode: PLANNING ONLY (no code)
+- Output: docs/PLAN-{task-slug}.md (dynamic naming)
 
-## Goals
-- [ ] Goal 1
-- [ ] Goal 2
+NAMING RULES:
+1. Extract 2-3 key words from request
+2. Lowercase, hyphen-separated
+3. Max 30 characters
+4. Example: "e-commerce cart" → PLAN-ecommerce-cart.md
 
-## Technical Approach
-[High-level architecture decisions]
-
-## Task Breakdown
-
-### Phase 1: Foundation
-| Task | Files | Complexity | Dependencies |
-|------|-------|------------|--------------|
-| Task 1 | file.ts | Low | None |
-| Task 2 | file2.ts | Medium | Task 1 |
-
-### Phase 2: Implementation
-| Task | Files | Complexity | Dependencies |
-|------|-------|------------|--------------|
-| Task 3 | file3.ts | High | Task 1, 2 |
-
-### Phase 3: Testing & Polish
-| Task | Files | Complexity | Dependencies |
-|------|-------|------------|--------------|
-| Task 4 | test.ts | Medium | Task 3 |
-
-## Risks & Mitigations
-| Risk | Impact | Mitigation |
-|------|--------|------------|
-| Risk 1 | High | How to handle |
-
-## Success Criteria
-- [ ] Criteria 1
-- [ ] Criteria 2
+RULES:
+1. Follow project-planner.md Phase -1 (Context Check)
+2. Follow project-planner.md Phase 0 (Socratic Gate)
+3. Create PLAN-{slug}.md with task breakdown
+4. DO NOT write any code files
+5. REPORT the exact file name created
 ```
 
 ---
 
-## Output
+## Expected Output
 
-Create the plan and save to `docs/PLAN.md` or present to user for approval before implementation.
+| Deliverable | Location |
+|-------------|----------|
+| Project Plan | `docs/PLAN-{task-slug}.md` |
+| Task Breakdown | Inside plan file |
+| Agent Assignments | Inside plan file |
+| Verification Checklist | Phase X in plan file |
+
+---
+
+## After Planning
+
+Tell user:
+```
+[OK] Plan created: docs/PLAN-{slug}.md
+
+Next steps:
+- Review the plan
+- Run `/create` to start implementation
+- Or modify plan manually
+```
+
+---
+
+## Naming Examples
+
+| Request | Plan File |
+|---------|-----------|
+| `/plan e-commerce site with cart` | `docs/PLAN-ecommerce-cart.md` |
+| `/plan mobile app for fitness` | `docs/PLAN-fitness-app.md` |
+| `/plan add dark mode feature` | `docs/PLAN-dark-mode.md` |
+| `/plan fix authentication bug` | `docs/PLAN-auth-fix.md` |
+| `/plan SaaS dashboard` | `docs/PLAN-saas-dashboard.md` |
+
+---
+
+## Usage
+
+```
+/plan e-commerce site with cart
+/plan mobile app for fitness tracking
+/plan SaaS dashboard with analytics
+```

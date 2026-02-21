@@ -2,7 +2,7 @@
 description: Deployment command for production releases. Pre-flight checks and deployment execution.
 ---
 
-# Production Deployment
+# /deploy - Production Deployment
 
 $ARGUMENTS
 
@@ -111,6 +111,7 @@ Before any deployment:
 ### Summary
 - **Version:** v1.2.3
 - **Environment:** production
+- **Duration:** 47 seconds
 - **Platform:** Vercel
 
 ### URLs
@@ -170,6 +171,6 @@ Run `/deploy rollback` if needed.
 /deploy
 /deploy check
 /deploy preview
-/deploy production
+/deploy production --skip-tests
 /deploy rollback
 ```

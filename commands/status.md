@@ -1,8 +1,8 @@
 ---
-description: Display project and development status. Progress tracking and status board.
+description: Display agent and project status. Progress tracking and status board.
 ---
 
-# Show Status
+# /status - Show Status
 
 $ARGUMENTS
 
@@ -10,7 +10,7 @@ $ARGUMENTS
 
 ## Task
 
-Show current project and development status.
+Show current project and agent status.
 
 ### What It Shows
 
@@ -19,10 +19,10 @@ Show current project and development status.
    - Tech stack
    - Current features
 
-2. **Development Status**
-   - Completed tasks
-   - In-progress work
-   - Pending items
+2. **Agent Status Board**
+   - Which agents are running
+   - Which tasks are completed
+   - Pending work
 
 3. **File Statistics**
    - Files created count
@@ -64,12 +64,12 @@ Show current project and development status.
 
 📄 Files: 73 created, 12 modified
 
-=== Development Status ===
+=== Agent Status ===
 
-✅ Database schema → Completed
-✅ API endpoints → Completed
-🔄 Dashboard UI → In Progress (60%)
-⏳ Testing → Waiting
+✅ database-architect → Completed
+✅ backend-specialist → Completed
+🔄 frontend-specialist → Dashboard components (60%)
+⏳ test-engineer → Waiting
 
 === Preview ===
 
@@ -79,33 +79,8 @@ Show current project and development status.
 
 ---
 
-## Quick Commands
+## Technical
 
-```bash
-# Check git status
-git status
-
-# Count files
-find . -type f -name "*.ts" | wc -l
-
-# Check running servers
-lsof -i :3000  # macOS/Linux
-netstat -ano | findstr :3000  # Windows
-
-# Check dependencies
-npm list --depth=0
-```
-
----
-
-## Status Indicators
-
-| Icon | Meaning |
-|------|---------|
-| ✅ | Completed |
-| 🔄 | In Progress |
-| ⏳ | Pending/Waiting |
-| ❌ | Failed/Blocked |
-| 💚 | Healthy |
-| 💛 | Warning |
-| 🔴 | Error |
+Status uses these scripts:
+- `python .agent/scripts/session_manager.py status`
+- `python .agent/scripts/auto_preview.py status`

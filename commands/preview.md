@@ -2,7 +2,7 @@
 description: Preview server start, stop, and status check. Local development server management.
 ---
 
-# Preview Management
+# /preview - Preview Management
 
 $ARGUMENTS
 
@@ -69,34 +69,13 @@ Which one? (default: 1)
 
 ---
 
-## Framework Detection
+## Technical
 
-| Files Present | Framework | Start Command |
-|--------------|-----------|---------------|
-| `next.config.*` | Next.js | `npm run dev` |
-| `vite.config.*` | Vite | `npm run dev` |
-| `nuxt.config.*` | Nuxt | `npm run dev` |
-| `svelte.config.*` | SvelteKit | `npm run dev` |
-| `package.json` (react) | Create React App | `npm start` |
-| `index.html` only | Static | `npx serve` |
+Auto preview uses `auto_preview.py` script:
 
----
-
-## Common Issues
-
-### Port Already in Use
 ```bash
-# Find process on port
-lsof -i :3000  # macOS/Linux
-netstat -ano | findstr :3000  # Windows
-
-# Kill process
-kill -9 <PID>  # macOS/Linux
-taskkill /PID <PID> /F  # Windows
+python .agent/scripts/auto_preview.py start [port]
+python .agent/scripts/auto_preview.py stop
+python .agent/scripts/auto_preview.py status
 ```
 
-### Server Won't Start
-1. Check `package.json` for start script
-2. Verify dependencies installed (`npm install`)
-3. Check for syntax errors in config files
-4. Look at terminal output for specific errors
