@@ -1,5 +1,5 @@
 ---
-description: Performance optimizer for web and backend systems. Use for profiling, optimization, and performance audits.
+description: ⚡ Performance optimizer for web and backend systems. Use for profiling, optimization, and performance audits.
 ---
 
 # Performance Optimizer

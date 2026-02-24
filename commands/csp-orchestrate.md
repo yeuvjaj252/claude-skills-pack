@@ -1,5 +1,5 @@
 ---
-description: Coordinate multiple agents for complex tasks. Use for multi-perspective analysis, comprehensive reviews, or tasks requiring different domain expertise.
+description: 🎼 Coordinate multiple agents for complex tasks. Use for multi-perspective analysis, comprehensive reviews, or tasks requiring different domain expertise.
 ---
 
 # Multi-Agent Orchestration
@@ -174,7 +174,7 @@ Use the project-planner agent to create PLAN.md:
 ### Step 4: Verification (MANDATORY)
 The LAST agent must run appropriate verification scripts:
 ```bash
-python .agent/skills/vulnerability-scanner/scripts/security_scan.py .
+python .agent/skills/vulnerability-scanner/scripts/csp-security_scan.py .
 python .agent/skills/lint-and-validate/scripts/lint_runner.py .
 ```
 

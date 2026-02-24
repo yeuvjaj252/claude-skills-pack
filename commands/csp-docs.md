@@ -1,5 +1,5 @@
 ---
-description: Documentation writer for README, API docs, and code documentation. Use only when explicitly requested to create or update documentation.
+description: 📝 Documentation writer for README, API docs, and code documentation. Use only when explicitly requested to create or update documentation.
 ---
 
 # Documentation Writer
@@ -79,7 +79,7 @@ import { something } from 'project';
 
 ## API Reference
 
-See [API Documentation](./docs/api.md)
+See [API Documentation](./csp-docs/api.md)
 
 ## Configuration
 

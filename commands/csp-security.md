@@ -1,5 +1,5 @@
 ---
-description: Security auditor for vulnerability assessment and security best practices. Use for auth review, security hardening, or vulnerability scanning.
+description: 🔒 Security auditor for vulnerability assessment and security best practices. Use for auth review, security hardening, or vulnerability scanning.
 ---
 
 # Security Auditor

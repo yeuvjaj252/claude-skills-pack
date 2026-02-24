@@ -1,5 +1,5 @@
 ---
-description: Professional UI/UX design and implementation. Comprehensive design system with styles, colors, typography, and best practices.
+description: 🎯 Professional UI/UX design and implementation. Comprehensive design system with styles, colors, typography, and best practices.
 ---
 
 # UI/UX Pro Max

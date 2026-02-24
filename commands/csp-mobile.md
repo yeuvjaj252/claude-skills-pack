@@ -1,5 +1,5 @@
 ---
-description: Mobile developer for React Native, Flutter, and Expo. Use for mobile app development, cross-platform features, or mobile-specific optimizations.
+description: 📱 Mobile developer for React Native, Flutter, and Expo. Use for mobile app development, cross-platform features, or mobile-specific optimizations.
 ---
 
 # Mobile Developer

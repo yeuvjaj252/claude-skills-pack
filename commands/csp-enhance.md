@@ -1,8 +1,8 @@
 ---
-description: Add or update features in existing application. Used for iterative development.
+description: ✨ Add or update features in existing application. Used for iterative development.
 ---
 
-# /enhance - Update Application
+# /csp-enhance - Update Application
 
 $ARGUMENTS
 
@@ -46,12 +46,12 @@ This command adds features or makes updates to existing application.
 ## Usage Examples
 
 ```
-/enhance add dark mode
-/enhance build admin panel
-/enhance integrate payment system
-/enhance add search feature
-/enhance edit profile page
-/enhance make responsive
+/csp-enhance add dark mode
+/csp-enhance build admin panel
+/csp-enhance integrate payment system
+/csp-enhance add search feature
+/csp-enhance edit profile page
+/csp-enhance make responsive
 ```
 
 ---

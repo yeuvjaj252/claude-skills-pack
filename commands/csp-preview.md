@@ -1,8 +1,8 @@
 ---
-description: Preview server start, stop, and status check. Local development server management.
+description: 👀 Preview server start, stop, and status check. Local development server management.
 ---
 
-# /preview - Preview Management
+# /csp-preview - Preview Management
 
 $ARGUMENTS
 
@@ -15,11 +15,11 @@ Manage preview server: start, stop, status check.
 ### Commands
 
 ```
-/preview           - Show current status
-/preview start     - Start server
-/preview stop      - Stop server
-/preview restart   - Restart
-/preview check     - Health check
+/csp-preview           - Show current status
+/csp-preview start     - Start server
+/csp-preview stop      - Stop server
+/csp-preview restart   - Restart
+/csp-preview check     - Health check
 ```
 
 ---
@@ -28,7 +28,7 @@ Manage preview server: start, stop, status check.
 
 ### Start Server
 ```
-/preview start
+/csp-preview start
 
 Response:
 🚀 Starting preview...
@@ -41,7 +41,7 @@ Response:
 
 ### Status Check
 ```
-/preview
+/csp-preview
 
 Response:
 === Preview Status ===
@@ -54,7 +54,7 @@ Response:
 
 ### Port Conflict
 ```
-/preview start
+/csp-preview start
 
 Response:
 ⚠️ Port 3000 is in use.

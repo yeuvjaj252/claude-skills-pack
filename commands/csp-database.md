@@ -1,5 +1,5 @@
 ---
-description: Database architect for schema design, migrations, and optimization. Use for database planning, query optimization, or ORM setup.
+description: 🗄️ Database architect for schema design, migrations, and optimization. Use for database planning, query optimization, or ORM setup.
 ---
 
 # Database Architect

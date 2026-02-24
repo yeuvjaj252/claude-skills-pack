@@ -1,8 +1,8 @@
 ---
-description: Test generation and test running command. Creates and executes tests for code.
+description: 🧪 Test generation and test running command. Creates and executes tests for code.
 ---
 
-# /test - Test Generation and Execution
+# /csp-test - Test Generation and Execution
 
 $ARGUMENTS
 
@@ -17,10 +17,10 @@ This command generates tests, runs existing tests, or checks test coverage.
 ## Sub-commands
 
 ```
-/test                - Run all tests
-/test [file/feature] - Generate tests for specific target
-/test coverage       - Show test coverage report
-/test watch          - Run tests in watch mode
+/csp-test                - Run all tests
+/csp-test [file/feature] - Generate tests for specific target
+/csp-test coverage       - Show test coverage report
+/csp-test watch          - Run tests in watch mode
 ```
 
 ---
@@ -96,10 +96,10 @@ Total: 15 tests (14 passed, 1 failed)
 ## Examples
 
 ```
-/test src/services/auth.service.ts
-/test user registration flow
-/test coverage
-/test fix failed tests
+/csp-test src/services/auth.service.ts
+/csp-test user registration flow
+/csp-test coverage
+/csp-test fix failed tests
 ```
 
 ---

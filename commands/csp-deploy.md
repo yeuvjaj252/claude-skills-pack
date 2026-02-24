@@ -1,8 +1,8 @@
 ---
-description: Deployment command for production releases. Pre-flight checks and deployment execution.
+description: 🚀 Deployment command for production releases. Pre-flight checks and deployment execution.
 ---
 
-# /deploy - Production Deployment
+# /csp-deploy - Production Deployment
 
 $ARGUMENTS
 
@@ -17,11 +17,11 @@ This command handles production deployment with pre-flight checks, deployment ex
 ## Sub-commands
 
 ```
-/deploy            - Interactive deployment wizard
-/deploy check      - Run pre-deployment checks only
-/deploy preview    - Deploy to preview/staging
-/deploy production - Deploy to production
-/deploy rollback   - Rollback to previous version
+/csp-deploy            - Interactive deployment wizard
+/csp-deploy check      - Run pre-deployment checks only
+/csp-deploy preview    - Deploy to preview/staging
+/csp-deploy production - Deploy to production
+/csp-deploy rollback   - Rollback to previous version
 ```
 
 ---
@@ -62,7 +62,7 @@ Before any deployment:
 
 ```
 ┌─────────────────┐
-│  /deploy        │
+│  /csp-deploy        │
 └────────┬────────┘
          │
          ▼
@@ -145,11 +145,11 @@ error TS2345: Argument of type 'string' is not assignable...
 ### Resolution
 1. Fix TypeScript error in `src/services/user.ts:45`
 2. Run `npm run build` locally to verify
-3. Try `/deploy` again
+3. Try `/csp-deploy` again
 
 ### Rollback Available
 Previous version (v1.2.2) is still active.
-Run `/deploy rollback` if needed.
+Run `/csp-deploy rollback` if needed.
 ```
 
 ---
@@ -168,9 +168,9 @@ Run `/deploy rollback` if needed.
 ## Examples
 
 ```
-/deploy
-/deploy check
-/deploy preview
-/deploy production --skip-tests
-/deploy rollback
+/csp-deploy
+/csp-deploy check
+/csp-deploy preview
+/csp-deploy production --skip-tests
+/csp-deploy rollback
 ```

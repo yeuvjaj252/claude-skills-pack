@@ -1,8 +1,8 @@
 ---
-description: Create project plan using project-planner agent. No code writing - only plan file generation.
+description: 📋 Lập kế hoạch dự án bằng project-planner agent. Chỉ tạo plan file, không viết code.
 ---
 
-# /plan - Project Planning Mode
+# /kehoach - Project Planning Mode
 
 $ARGUMENTS
 
@@ -62,7 +62,7 @@ Tell user:
 
 Next steps:
 - Review the plan
-- Run `/create` to start implementation
+- Run `/cook` to start implementation
 - Or modify plan manually
 ```
 
@@ -72,18 +72,18 @@ Next steps:
 
 | Request | Plan File |
 |---------|-----------|
-| `/plan e-commerce site with cart` | `docs/PLAN-ecommerce-cart.md` |
-| `/plan mobile app for fitness` | `docs/PLAN-fitness-app.md` |
-| `/plan add dark mode feature` | `docs/PLAN-dark-mode.md` |
-| `/plan fix authentication bug` | `docs/PLAN-auth-fix.md` |
-| `/plan SaaS dashboard` | `docs/PLAN-saas-dashboard.md` |
+| `/kehoach e-commerce site with cart` | `docs/PLAN-ecommerce-cart.md` |
+| `/kehoach mobile app for fitness` | `docs/PLAN-fitness-app.md` |
+| `/kehoach add dark mode feature` | `docs/PLAN-dark-mode.md` |
+| `/kehoach fix authentication bug` | `docs/PLAN-auth-fix.md` |
+| `/kehoach SaaS dashboard` | `docs/PLAN-saas-dashboard.md` |
 
 ---
 
 ## Usage
 
 ```
-/plan e-commerce site with cart
-/plan mobile app for fitness tracking
-/plan SaaS dashboard with analytics
+/kehoach e-commerce site with cart
+/kehoach mobile app for fitness tracking
+/kehoach SaaS dashboard with analytics
 ```

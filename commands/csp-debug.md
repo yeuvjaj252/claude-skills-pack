@@ -1,8 +1,8 @@
 ---
-description: Debugging command. Activates DEBUG mode for systematic problem investigation.
+description: 🐞 Debugging command. Activates DEBUG mode for systematic problem investigation.
 ---
 
-# /debug - Systematic Problem Investigation
+# /csp-debug - Systematic Problem Investigation
 
 $ARGUMENTS
 
@@ -16,7 +16,7 @@ This command activates DEBUG mode for systematic investigation of issues, errors
 
 ## Behavior
 
-When `/debug` is triggered:
+When `/csp-debug` is triggered:
 
 1. **Gather information**
    - Error message
@@ -87,10 +87,10 @@ When `/debug` is triggered:
 ## Examples
 
 ```
-/debug login not working
-/debug API returns 500
-/debug form doesn't submit
-/debug data not saving
+/csp-debug login not working
+/csp-debug API returns 500
+/csp-debug form doesn't submit
+/csp-debug data not saving
 ```
 
 ---

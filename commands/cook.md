@@ -1,8 +1,8 @@
 ---
-description: Create new application command. Triggers App Builder skill and starts interactive dialogue with user.
+description: 👨‍🍳 Tạo ứng dụng mới. Kích hoạt App Builder skill và bắt đầu luồng trao đổi tương tác với user.
 ---
 
-# /create - Create Application
+# /cook - Create Application
 
 $ARGUMENTS
 
@@ -40,11 +40,11 @@ This command starts a new application creation process.
 ## Usage Examples
 
 ```
-/create blog site
-/create e-commerce app with product listing and cart
-/create todo app
-/create Instagram clone
-/create crm system with customer management
+/cook blog site
+/cook e-commerce app with product listing and cart
+/cook todo app
+/cook Instagram clone
+/cook crm system with customer management
 ```
 
 ---

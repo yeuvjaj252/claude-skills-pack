@@ -1,8 +1,8 @@
 ---
-description: Structured brainstorming for projects and features. Explores multiple options before implementation.
+description: 🧠 Structured brainstorming for projects and features. Explores multiple options before implementation.
 ---
 
-# /brainstorm - Structured Idea Exploration
+# /csp-brainstorm - Structured Idea Exploration
 
 $ARGUMENTS
 
@@ -16,7 +16,7 @@ This command activates BRAINSTORM mode for structured idea exploration. Use when
 
 ## Behavior
 
-When `/brainstorm` is triggered:
+When `/csp-brainstorm` is triggered:
 
 1. **Understand the goal**
    - What problem are we solving?
@@ -97,10 +97,10 @@ What direction would you like to explore?
 ## Examples
 
 ```
-/brainstorm authentication system
-/brainstorm state management for complex form
-/brainstorm database schema for social app
-/brainstorm caching strategy
+/csp-brainstorm authentication system
+/csp-brainstorm state management for complex form
+/csp-brainstorm database schema for social app
+/csp-brainstorm caching strategy
 ```
 
 ---

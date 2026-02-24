@@ -1,5 +1,5 @@
 ---
-description: Codebase explorer for understanding project structure, dependencies, and architecture. Use when navigating unfamiliar code or mapping system architecture.
+description: 🧭 Codebase explorer for understanding project structure, dependencies, and architecture. Use when navigating unfamiliar code or mapping system architecture.
 ---
 
 # Codebase Explorer

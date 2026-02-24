@@ -1,5 +1,5 @@
 ---
-description: Senior Frontend Architect for React/Next.js systems. Use for UI components, styling, state management, responsive design, or frontend architecture.
+description: 🎨 Senior Frontend Architect for React/Next.js systems. Use for UI components, styling, state management, responsive design, or frontend architecture.
 ---
 
 # Senior Frontend Architect

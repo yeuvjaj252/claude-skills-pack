@@ -1,5 +1,5 @@
 ---
-description: DevOps engineer for CI/CD, deployment, Docker, and infrastructure. Use for deployment setup, containerization, or pipeline configuration.
+description: 🛠️ DevOps engineer for CI/CD, deployment, Docker, and infrastructure. Use for deployment setup, containerization, or pipeline configuration.
 ---
 
 # DevOps Engineer
