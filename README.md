@@ -48,6 +48,8 @@ powershell -ExecutionPolicy Bypass -File .\uninstall.ps1
 powershell -ExecutionPolicy Bypass -File .\update.ps1
 ```
 
+> Ghi chú: script update sẽ thử đồng bộ source mới nhất từ GitHub (`git pull --ff-only`) nếu thư mục hiện tại là git clone có `origin`. Nếu không pull được (local changes/network), script sẽ tiếp tục update bằng source local hiện có.
+
 ### Migration nhanh
 
 - `/plan` -> `/kehoach`

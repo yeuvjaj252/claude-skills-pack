@@ -6,6 +6,30 @@ $ClaudeDir = Join-Path $env:USERPROFILE ".claude"
 
 Write-Host "Updating Claude Skills Pack..."
 
+# Try to sync latest source from GitHub when running inside a git clone
+$GitFolder = Join-Path $ScriptDir ".git"
+$HasGit = Get-Command git -ErrorAction SilentlyContinue
+if ($HasGit -and (Test-Path $GitFolder)) {
+  git -C $ScriptDir remote get-url origin *> $null
+  if ($LASTEXITCODE -eq 0) {
+    Write-Host "Syncing source from GitHub..."
+    git -C $ScriptDir pull --ff-only *> $null
+    if ($LASTEXITCODE -eq 0) {
+      Write-Host "Source synced from GitHub"
+    }
+    else {
+      Write-Host "Could not sync from GitHub (local changes or network issue)."
+      Write-Host "Continuing with current local files."
+    }
+  }
+  else {
+    Write-Host "No origin remote found. Continuing with local files."
+  }
+}
+else {
+  Write-Host "Git repository not detected. Continuing with local files."
+}
+
 $CommandsDir = Join-Path $ClaudeDir "commands"
 $AgentsDir = Join-Path $ClaudeDir "agents"
 $SkillsDir = Join-Path $ClaudeDir "skills"

@@ -10,6 +10,23 @@ CLAUDE_DIR="$HOME/.claude"
 
 echo "🔄 Updating Claude Skills Pack..."
 
+# Try to sync latest source from GitHub when running inside a git clone
+if command -v git >/dev/null 2>&1 && [ -d "$SCRIPT_DIR/.git" ]; then
+  if git -C "$SCRIPT_DIR" remote get-url origin >/dev/null 2>&1; then
+    echo "📡 Syncing source from GitHub..."
+    if git -C "$SCRIPT_DIR" pull --ff-only; then
+      echo "✅ Source synced from GitHub"
+    else
+      echo "⚠️  Could not sync from GitHub (local changes or network issue)."
+      echo "ℹ️  Continuing with current local files."
+    fi
+  else
+    echo "ℹ️  No origin remote found. Continuing with local files."
+  fi
+else
+  echo "ℹ️  Git repository not detected. Continuing with local files."
+fi
+
 # Ensure target directories exist
 mkdir -p "$CLAUDE_DIR/commands"
 mkdir -p "$CLAUDE_DIR/agents"
