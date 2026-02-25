@@ -52,7 +52,7 @@ powershell -ExecutionPolicy Bypass -File .\update.ps1
 
 ### Migration nhanh
 
-- `/plan` -> `/kehoach`
+- `/plan` -> `/csp-plan`
 - `/create` -> `/cook`
 - Các command còn lại chuyển sang namespace `/csp-*`
 
@@ -79,7 +79,7 @@ powershell -ExecutionPolicy Bypass -File .\update.ps1
 | `/csp-enhance` | ✨ Nâng cấp tính năng trong dự án hiện có, triển khai theo hướng iterative development. |
 | `/csp-explore` | 🧭 Khám phá codebase: cấu trúc, entry points, dependencies, data flow, pattern kiến trúc. |
 | `/csp-frontend` | 🎨 Kiến trúc frontend React/Next.js: component, state, responsive UX, accessibility, hiệu năng. |
-| `/kehoach` | 📋 Lập kế hoạch implementation chi tiết (không code), breakdown task và dependency rõ ràng. |
+| `/csp-plan` | 📋 Lập kế hoạch implementation chi tiết (không code), breakdown task và dependency rõ ràng. |
 | `/csp-mobile` | 📱 Phát triển mobile cross-platform (React Native/Flutter/Expo), tối ưu theo ngữ cảnh di động. |
 | `/csp-orchestrate` | 🎼 Điều phối nhiều agent cho bài toán phức tạp cần nhiều góc nhìn chuyên môn. |
 | `/csp-performance` | ⚡ Audit và tối ưu hiệu năng frontend/backend, theo dõi Core Web Vitals và bottlenecks. |
@@ -92,4 +92,4 @@ powershell -ExecutionPolicy Bypass -File .\update.ps1
 
 ## Danh sách nhanh
 
-`/csp-backend`, `/csp-brainstorm`, `/cook`, `/csp-database`, `/csp-debug`, `/csp-deploy`, `/csp-devops`, `/csp-docs`, `/csp-enhance`, `/csp-explore`, `/csp-frontend`, `/kehoach`, `/csp-mobile`, `/csp-orchestrate`, `/csp-performance`, `/csp-preview`, `/csp-security`, `/csp-status`, `/csp-test`, `/csp-ui`, `/csp-ui-ux-pro-max`
+`/csp-backend`, `/csp-brainstorm`, `/cook`, `/csp-database`, `/csp-debug`, `/csp-deploy`, `/csp-devops`, `/csp-docs`, `/csp-enhance`, `/csp-explore`, `/csp-frontend`, `/csp-plan`, `/csp-mobile`, `/csp-orchestrate`, `/csp-performance`, `/csp-preview`, `/csp-security`, `/csp-status`, `/csp-test`, `/csp-ui`, `/csp-ui-ux-pro-max`

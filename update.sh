@@ -55,6 +55,7 @@ LEGACY_COMMANDS=(
   "test.md"
   "ui.md"
   "ui-ux-pro-max.md"
+  "kehoach.md"
 )
 
 for cmd in "${LEGACY_COMMANDS[@]}"; do
@@ -87,9 +88,9 @@ echo "🎉 Update complete!"
 echo ""
 echo "Next steps:"
 echo "  1. Run /clear in Claude Code to reload"
-echo "  2. Test with /kehoach, /cook, /csp-backend, /csp-deploy, etc."
+echo "  2. Test with /csp-plan, /cook, /csp-backend, /csp-deploy, etc."
 echo ""
 echo "Migration notes:"
-echo "  - /plan -> /kehoach"
+echo "  - /plan -> /csp-plan"
 echo "  - /create -> /cook"
 echo "  - Core commands moved to /csp-* namespace"

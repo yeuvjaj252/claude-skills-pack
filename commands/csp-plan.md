@@ -2,7 +2,7 @@
 description: 📋 Lập kế hoạch dự án bằng project-planner agent. Chỉ tạo plan file, không viết code.
 ---
 
-# /kehoach - Project Planning Mode
+# /csp-plan - Project Planning Mode
 
 $ARGUMENTS
 
@@ -72,18 +72,18 @@ Next steps:
 
 | Request | Plan File |
 |---------|-----------|
-| `/kehoach e-commerce site with cart` | `docs/PLAN-ecommerce-cart.md` |
-| `/kehoach mobile app for fitness` | `docs/PLAN-fitness-app.md` |
-| `/kehoach add dark mode feature` | `docs/PLAN-dark-mode.md` |
-| `/kehoach fix authentication bug` | `docs/PLAN-auth-fix.md` |
-| `/kehoach SaaS dashboard` | `docs/PLAN-saas-dashboard.md` |
+| `/csp-plan e-commerce site with cart` | `docs/PLAN-ecommerce-cart.md` |
+| `/csp-plan mobile app for fitness` | `docs/PLAN-fitness-app.md` |
+| `/csp-plan add dark mode feature` | `docs/PLAN-dark-mode.md` |
+| `/csp-plan fix authentication bug` | `docs/PLAN-auth-fix.md` |
+| `/csp-plan SaaS dashboard` | `docs/PLAN-saas-dashboard.md` |
 
 ---
 
 ## Usage
 
 ```
-/kehoach e-commerce site with cart
-/kehoach mobile app for fitness tracking
-/kehoach SaaS dashboard with analytics
+/csp-plan e-commerce site with cart
+/csp-plan mobile app for fitness tracking
+/csp-plan SaaS dashboard with analytics
 ```

@@ -60,7 +60,8 @@ $LegacyCommands = @(
   "status.md",
   "test.md",
   "ui.md",
-  "ui-ux-pro-max.md"
+  "ui-ux-pro-max.md",
+  "kehoach.md"
 )
 
 foreach ($cmd in $LegacyCommands) {
@@ -106,9 +107,9 @@ Write-Host "Update complete!"
 Write-Host ""
 Write-Host "Next steps:"
 Write-Host "  1. Run /clear in Claude Code to reload"
-Write-Host "  2. Test with /kehoach, /cook, /csp-backend, /csp-deploy, etc."
+Write-Host "  2. Test with /csp-plan, /cook, /csp-backend, /csp-deploy, etc."
 Write-Host ""
 Write-Host "Migration notes:"
-Write-Host "  - /plan -> /kehoach"
+Write-Host "  - /plan -> /csp-plan"
 Write-Host "  - /create -> /cook"
 Write-Host "  - Core commands moved to /csp-* namespace"
