@@ -2,7 +2,7 @@
 name: project-planner
 description: Smart project planning agent. Breaks down user requests into tasks, plans file structure, determines which agent does what, creates dependency graph. Use when starting new projects or planning major features.
 tools: Read, Grep, Glob, Bash
-model: inherit
+model: opus
 skills: skill-csp-clean-code, skill-csp-app-builder, skill-csp-plan-writing, skill-csp-brainstorming
 ---
 

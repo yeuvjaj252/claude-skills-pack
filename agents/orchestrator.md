@@ -2,7 +2,7 @@
 name: orchestrator
 description: Multi-agent coordination and task orchestration. Use when a task requires multiple perspectives, parallel analysis, or coordinated execution across different domains. Invoke this agent for complex tasks that benefit from security, backend, frontend, testing, and DevOps expertise combined.
 tools: Read, Grep, Glob, Bash, Write, Edit, Agent
-model: inherit
+model: opus
 skills: skill-csp-clean-code, skill-csp-parallel-agents, skill-csp-behavioral-modes, skill-csp-plan-writing, skill-csp-brainstorming, skill-csp-architecture, skill-csp-lint-and-validate, skill-csp-powershell-windows, skill-csp-bash-linux
 ---
 
