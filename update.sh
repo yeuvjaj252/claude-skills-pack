@@ -65,6 +65,64 @@ for cmd in "${LEGACY_COMMANDS[@]}"; do
   fi
 done
 
+# Cleanup legacy skill names (renamed to skill-csp-* prefix)
+LEGACY_SKILLS=(
+  "api-patterns"
+  "app-builder"
+  "architecture"
+  "bash-linux"
+  "behavioral-modes"
+  "brainstorming"
+  "clean-code"
+  "cloudflare-expert"
+  "code-review-checklist"
+  "database-design"
+  "deployment-procedures"
+  "docker-expert"
+  "documentation-templates"
+  "frontend-design"
+  "game-development"
+  "geo-fundamentals"
+  "i18n-localization"
+  "intelligent-routing"
+  "lint-and-validate"
+  "mcp-builder"
+  "mobile-design"
+  "nestjs-expert"
+  "nextjs-best-practices"
+  "nextjs-react-expert"
+  "nodejs-best-practices"
+  "parallel-agents"
+  "performance-profiling"
+  "plan-writing"
+  "powershell-windows"
+  "prisma-expert"
+  "prompt-leverage"
+  "python-patterns"
+  "react-patterns"
+  "red-team-tactics"
+  "rust-pro"
+  "seo-fundamentals"
+  "server-management"
+  "systematic-debugging"
+  "tailwind-patterns"
+  "tdd-workflow"
+  "testing-patterns"
+  "typescript-expert"
+  "ui-ux-pro-max"
+  "vue-expert"
+  "vulnerability-scanner"
+  "web-design-guidelines"
+  "webapp-testing"
+)
+
+for skill in "${LEGACY_SKILLS[@]}"; do
+  if [ -d "$CLAUDE_DIR/skills/$skill" ]; then
+    rm -rf "$CLAUDE_DIR/skills/$skill"
+    echo "🧹 Removed legacy skill: $skill"
+  fi
+done
+
 # Sync commands
 if [ -d "$SCRIPT_DIR/commands" ] && [ "$(ls -A $SCRIPT_DIR/commands 2>/dev/null)" ]; then
   cp -r "$SCRIPT_DIR/commands"/* "$CLAUDE_DIR/commands/"

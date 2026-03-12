@@ -72,6 +72,65 @@ foreach ($cmd in $LegacyCommands) {
   }
 }
 
+# Cleanup legacy skill names (renamed to skill-csp-* prefix)
+$LegacySkills = @(
+  "api-patterns",
+  "app-builder",
+  "architecture",
+  "bash-linux",
+  "behavioral-modes",
+  "brainstorming",
+  "clean-code",
+  "cloudflare-expert",
+  "code-review-checklist",
+  "database-design",
+  "deployment-procedures",
+  "docker-expert",
+  "documentation-templates",
+  "frontend-design",
+  "game-development",
+  "geo-fundamentals",
+  "i18n-localization",
+  "intelligent-routing",
+  "lint-and-validate",
+  "mcp-builder",
+  "mobile-design",
+  "nestjs-expert",
+  "nextjs-best-practices",
+  "nextjs-react-expert",
+  "nodejs-best-practices",
+  "parallel-agents",
+  "performance-profiling",
+  "plan-writing",
+  "powershell-windows",
+  "prisma-expert",
+  "prompt-leverage",
+  "python-patterns",
+  "react-patterns",
+  "red-team-tactics",
+  "rust-pro",
+  "seo-fundamentals",
+  "server-management",
+  "systematic-debugging",
+  "tailwind-patterns",
+  "tdd-workflow",
+  "testing-patterns",
+  "typescript-expert",
+  "ui-ux-pro-max",
+  "vue-expert",
+  "vulnerability-scanner",
+  "web-design-guidelines",
+  "webapp-testing"
+)
+
+foreach ($skill in $LegacySkills) {
+  $legacySkillPath = Join-Path $SkillsDir $skill
+  if (Test-Path $legacySkillPath) {
+    Remove-Item -Path $legacySkillPath -Recurse -Force
+    Write-Host "Removed legacy skill: $skill"
+  }
+}
+
 # Sync commands
 $SourceCommands = Join-Path $ScriptDir "commands"
 if (Test-Path $SourceCommands) {

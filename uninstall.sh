@@ -9,22 +9,29 @@ CLAUDE_DIR="$HOME/.claude"
 
 echo "🗑️  Uninstalling Claude Skills Pack..."
 
-# Remove commands
+# Remove CSP commands only
 if [ -d "$CLAUDE_DIR/commands" ]; then
-    rm -rf "$CLAUDE_DIR/commands"
-    echo "✅ Commands removed"
+    for f in "$CLAUDE_DIR/commands"/csp-*.md "$CLAUDE_DIR/commands/cook.md"; do
+        [ -f "$f" ] && rm -f "$f" && echo "🧹 Removed: $(basename $f)"
+    done
+    echo "✅ CSP commands removed"
 fi
 
-# Remove agents
+# Remove CSP agents only
 if [ -d "$CLAUDE_DIR/agents" ]; then
-    rm -rf "$CLAUDE_DIR/agents"
-    echo "✅ Agents removed"
+    for f in "$CLAUDE_DIR/agents"/*.md; do
+        [ -f "$f" ] && rm -f "$f" && echo "🧹 Removed: $(basename $f)"
+    done
+    echo "✅ CSP agents removed"
 fi
 
-# Remove skills
+# Remove CSP skills only (skill-csp-* prefix)
 if [ -d "$CLAUDE_DIR/skills" ]; then
-    rm -rf "$CLAUDE_DIR/skills"
-    echo "✅ Skills removed"
+    for d in "$CLAUDE_DIR/skills"/skill-csp-*/; do
+        [ -d "$d" ] && rm -rf "$d" && echo "🧹 Removed: $(basename $d)"
+    done
+    [ -f "$CLAUDE_DIR/skills/doc.md" ] && rm -f "$CLAUDE_DIR/skills/doc.md"
+    echo "✅ CSP skills removed"
 fi
 
 echo ""

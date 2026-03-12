@@ -3,7 +3,7 @@ name: mobile-developer
 description: Expert in React Native and Flutter mobile development. Use for cross-platform mobile apps, native features, and mobile-specific patterns. Triggers on mobile, react native, flutter, ios, android, app store, expo.
 tools: Read, Grep, Glob, Bash, Edit, Write
 model: inherit
-skills: clean-code, mobile-design
+skills: skill-csp-clean-code, skill-csp-mobile-design
 ---
 
 # Mobile Developer
@@ -37,15 +37,15 @@ When you build mobile apps, you think:
 
 | File | Content | Status |
 |------|---------|--------|
-| **[mobile-design-thinking.md](../skills/mobile-design/mobile-design-thinking.md)** | **⚠️ ANTI-MEMORIZATION: Think, don't copy** | **⬜ CRITICAL FIRST** |
-| **[SKILL.md](../skills/mobile-design/SKILL.md)** | **Anti-patterns, checkpoint, overview** | **⬜ CRITICAL** |
-| **[touch-psychology.md](../skills/mobile-design/touch-psychology.md)** | **Fitts' Law, gestures, haptics** | **⬜ CRITICAL** |
-| **[mobile-performance.md](../skills/mobile-design/mobile-performance.md)** | **RN/Flutter optimization, 60fps** | **⬜ CRITICAL** |
-| **[mobile-backend.md](../skills/mobile-design/mobile-backend.md)** | **Push notifications, offline sync, mobile API** | **⬜ CRITICAL** |
-| **[mobile-testing.md](../skills/mobile-design/mobile-testing.md)** | **Testing pyramid, E2E, platform tests** | **⬜ CRITICAL** |
-| **[mobile-debugging.md](../skills/mobile-design/mobile-debugging.md)** | **Native vs JS debugging, Flipper, Logcat** | **⬜ CRITICAL** |
-| [mobile-navigation.md](../skills/mobile-design/mobile-navigation.md) | Tab/Stack/Drawer, deep linking | ⬜ Read |
-| [decision-trees.md](../skills/mobile-design/decision-trees.md) | Framework, state, storage selection | ⬜ Read |
+| **[mobile-design-thinking.md](../skills/skill-csp-mobile-design/mobile-design-thinking.md)** | **⚠️ ANTI-MEMORIZATION: Think, don't copy** | **⬜ CRITICAL FIRST** |
+| **[SKILL.md](../skills/skill-csp-mobile-design/SKILL.md)** | **Anti-patterns, checkpoint, overview** | **⬜ CRITICAL** |
+| **[touch-psychology.md](../skills/skill-csp-mobile-design/touch-psychology.md)** | **Fitts' Law, gestures, haptics** | **⬜ CRITICAL** |
+| **[mobile-performance.md](../skills/skill-csp-mobile-design/mobile-performance.md)** | **RN/Flutter optimization, 60fps** | **⬜ CRITICAL** |
+| **[mobile-backend.md](../skills/skill-csp-mobile-design/mobile-backend.md)** | **Push notifications, offline sync, mobile API** | **⬜ CRITICAL** |
+| **[mobile-testing.md](../skills/skill-csp-mobile-design/mobile-testing.md)** | **Testing pyramid, E2E, platform tests** | **⬜ CRITICAL** |
+| **[mobile-debugging.md](../skills/skill-csp-mobile-design/mobile-debugging.md)** | **Native vs JS debugging, Flipper, Logcat** | **⬜ CRITICAL** |
+| [mobile-navigation.md](../skills/skill-csp-mobile-design/mobile-navigation.md) | Tab/Stack/Drawer, deep linking | ⬜ Read |
+| [decision-trees.md](../skills/skill-csp-mobile-design/decision-trees.md) | Framework, state, storage selection | ⬜ Read |
 
 > 🧠 **mobile-design-thinking.md is PRIORITY!** Prevents memorized patterns, forces thinking.
 
@@ -53,8 +53,8 @@ When you build mobile apps, you think:
 
 | Platform | File | When to Read |
 |----------|------|--------------|
-| **iOS** | [platform-ios.md](../skills/mobile-design/platform-ios.md) | Building for iPhone/iPad |
-| **Android** | [platform-android.md](../skills/mobile-design/platform-android.md) | Building for Android |
+| **iOS** | [platform-ios.md](../skills/skill-csp-mobile-design/platform-ios.md) | Building for iPhone/iPad |
+| **Android** | [platform-android.md](../skills/skill-csp-mobile-design/platform-android.md) | Building for Android |
 | **Both** | Both above | Cross-platform (React Native/Flutter) |
 
 > 🔴 **iOS project? Read platform-ios.md FIRST!**
@@ -185,7 +185,7 @@ Before any coding, answer:
 
 ### Phase 2: Architecture
 
-Apply decision frameworks from [decision-trees.md](../skills/mobile-design/decision-trees.md):
+Apply decision frameworks from [decision-trees.md](../skills/skill-csp-mobile-design/decision-trees.md):
 - Framework selection
 - State management
 - Navigation pattern

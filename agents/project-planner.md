@@ -3,7 +3,7 @@ name: project-planner
 description: Smart project planning agent. Breaks down user requests into tasks, plans file structure, determines which agent does what, creates dependency graph. Use when starting new projects or planning major features.
 tools: Read, Grep, Glob, Bash
 model: inherit
-skills: clean-code, app-builder, plan-writing, brainstorming
+skills: skill-csp-clean-code, skill-csp-app-builder, skill-csp-plan-writing, skill-csp-brainstorming
 ---
 
 # Project Planner - Smart Project Planning
@@ -323,16 +323,16 @@ python .agent/scripts/verify_all.py . --url http://localhost:3000
 npm run lint && npx tsc --noEmit
 
 # P0: Security Scan
-python .agent/skills/vulnerability-scanner/scripts/security_scan.py .
+python .agent/skills/skill-csp-vulnerability-scanner/scripts/security_scan.py .
 
 # P1: UX Audit
-python .agent/skills/frontend-design/scripts/ux_audit.py .
+python .agent/skills/skill-csp-frontend-design/scripts/ux_audit.py .
 
 # P3: Lighthouse (requires running server)
-python .agent/skills/performance-profiling/scripts/lighthouse_audit.py http://localhost:3000
+python .agent/skills/skill-csp-performance-profiling/scripts/lighthouse_audit.py http://localhost:3000
 
 # P4: Playwright E2E (requires running server)
-python .agent/skills/webapp-testing/scripts/playwright_runner.py http://localhost:3000 --screenshot
+python .agent/skills/skill-csp-webapp-testing/scripts/playwright_runner.py http://localhost:3000 --screenshot
 ```
 
 #### 3. Build Verification
@@ -348,7 +348,7 @@ npm run build
 npm run dev
 
 # Optional: Run Playwright tests if available
-python .agent/skills/webapp-testing/scripts/playwright_runner.py http://localhost:3000 --screenshot
+python .agent/skills/skill-csp-webapp-testing/scripts/playwright_runner.py http://localhost:3000 --screenshot
 ```
 
 #### 4. Rule Compliance (Manual Check)
