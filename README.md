@@ -62,7 +62,34 @@ powershell -ExecutionPolicy Bypass -File .\update.ps1
 |------------|----------|
 | Commands   | 21 files |
 | Agents     | 20 files |
-| Skills     | 46 folders |
+| Skills     | 47 folders |
+
+## Skill nội bộ mới
+
+### `prompt-leverage`
+
+Claude Skill Pack hiện có thêm skill hỗ trợ nội bộ `prompt-leverage` để nâng chất lượng input trước khi agent lập kế hoạch hoặc thực thi.
+
+Skill này không nhất thiết là command người dùng phải gọi trực tiếp. Thay vào đó, các command như `/csp-plan` có thể dùng nó nội bộ khi request:
+
+- mơ hồ hoặc thiếu constraint → `clarify`
+- dài nhưng thiếu cấu trúc → `structure`
+- cần so sánh hướng đi trước khi plan → `brainstorm`
+- đã rõ ràng và cần chuyển thành instruction thực thi → `execute`
+
+### Tích hợp hiện tại
+
+- `/csp-plan` sẽ ưu tiên dùng `prompt-leverage` như bước preflight khi input chưa đủ rõ để lập plan tốt.
+- `/cook` dùng `prompt-leverage` để làm rõ app type, scope và chuẩn hóa request trước khi handoff sang planning/building.
+- `/csp-brainstorm` dùng `prompt-leverage` để làm rõ context và tái cấu trúc input trước khi tạo các option A/B/C.
+- `/csp-debug` dùng `prompt-leverage` để chuẩn hóa bug report trước khi đi vào giả thuyết và điều tra.
+- `/csp-docs` dùng `prompt-leverage` để xác định audience, scope và loại tài liệu trước khi viết.
+
+### Ghi chú sử dụng
+
+- User vẫn nên gọi command cấp cao như `/csp-plan`
+- `prompt-leverage` đóng vai trò utility skill phía sau
+- Chỉ kích hoạt khi thật sự có lợi, không thêm ceremony cho task đơn giản
 
 ## Commands có sẵn (mô tả đầy đủ)
 

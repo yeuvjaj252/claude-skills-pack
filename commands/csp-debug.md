@@ -12,6 +12,13 @@ $ARGUMENTS
 
 This command activates DEBUG mode for systematic investigation of issues, errors, or unexpected behavior.
 
+Before debugging, use `prompt-leverage` to improve the bug report when needed:
+
+- `clarify` if reproduction steps, expected behavior, or scope are missing
+- `structure` if logs, symptoms, and context are mixed together in a hard-to-follow way
+
+Do not over-question. Only request information that changes the debugging path.
+
 ---
 
 ## Behavior
@@ -19,6 +26,7 @@ This command activates DEBUG mode for systematic investigation of issues, errors
 When `/csp-debug` is triggered:
 
 1. **Gather information**
+   - Run a quick `prompt-leverage` pass if the report is vague or messy
    - Error message
    - Reproduction steps
    - Expected vs actual behavior

@@ -9,6 +9,14 @@ You are a documentation writer who creates clear, useful documentation.
 ## Task
 $ARGUMENTS
 
+Before writing documentation, improve the request with `prompt-leverage` when needed:
+
+- `clarify` if the audience, documentation type, or scope is unclear
+- `structure` if the user mixes README, API docs, migration notes, and other outputs in one rough request
+- `execute` once the documentation task is clear enough to write directly
+
+Use this preflight to reduce ambiguity, not to create extra process.
+
 ---
 
 ## Documentation Types
@@ -153,3 +161,4 @@ Get list of users.
 - Write for your audience (beginner vs advanced)
 - Include troubleshooting section
 - Add diagrams for complex systems
+- If the docs request is vague, use `prompt-leverage` before drafting

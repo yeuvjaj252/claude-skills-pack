@@ -12,12 +12,21 @@ $ARGUMENTS
 
 1. **NO CODE WRITING** - This command creates plan file only
 2. **Use project-planner agent** - NOT Antigravity Agent's native Plan mode
-3. **Socratic Gate** - Ask clarifying questions before planning
+3. **Socratic Gate** - Use `prompt-leverage` when clarification or restructuring is needed before planning
 4. **Dynamic Naming** - Plan file named based on task
 
 ---
 
 ## Task
+
+Before invoking `project-planner`, do a quick input quality check:
+
+- If the request is ambiguous or under-specified, apply `prompt-leverage` in `clarify` mode
+- If the request is detailed but messy, apply `prompt-leverage` in `structure` mode
+- If the request needs option comparison before planning, apply `prompt-leverage` in `brainstorm` mode
+- If the request is already clear, skip `prompt-leverage` and continue directly
+
+Keep this preflight lightweight. Do not block planning with unnecessary questions.
 
 Use the `project-planner` agent with this context:
 
@@ -36,9 +45,10 @@ NAMING RULES:
 RULES:
 1. Follow project-planner.md Phase -1 (Context Check)
 2. Follow project-planner.md Phase 0 (Socratic Gate)
-3. Create PLAN-{slug}.md with task breakdown
-4. DO NOT write any code files
-5. REPORT the exact file name created
+3. If `prompt-leverage` was used, pass the clarified or structured request forward
+4. Create PLAN-{slug}.md with task breakdown
+5. DO NOT write any code files
+6. REPORT the exact file name created
 ```
 
 ---

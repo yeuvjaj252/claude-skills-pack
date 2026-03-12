@@ -12,6 +12,12 @@ $ARGUMENTS
 
 This command activates BRAINSTORM mode for structured idea exploration. Use when you need to explore options before committing to an implementation.
 
+Before brainstorming, use `prompt-leverage` if the input needs cleanup:
+
+- `clarify` when the goal, users, or constraints are missing
+- `structure` when the prompt is long, scattered, or mixes multiple objectives
+- `brainstorm` when the request needs to be reframed into option comparison before generating the final response
+
 ---
 
 ## Behavior
@@ -19,6 +25,7 @@ This command activates BRAINSTORM mode for structured idea exploration. Use when
 When `/csp-brainstorm` is triggered:
 
 1. **Understand the goal**
+   - Apply `prompt-leverage` first if the request is unclear or poorly structured
    - What problem are we solving?
    - Who is the user?
    - What constraints exist?
