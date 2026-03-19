@@ -23,6 +23,7 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash
 | [visual-effects.md](visual-effects.md) | ⚪ Optional | Glassmorphism, shadows, gradients |
 | [animation-guide.md](animation-guide.md) | ⚪ Optional | Animation needed |
 | [motion-graphics.md](motion-graphics.md) | ⚪ Optional | Lottie, GSAP, 3D |
+| [references/animejs.md](references/animejs.md) | ⚪ Optional | Anime.js v4 animations |
 | [decision-trees.md](decision-trees.md) | ⚪ Optional | Context templates |
 
 > 🔴 **ux-psychology.md = ALWAYS READ. Others = only if relevant.**
@@ -68,6 +69,37 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash
 | **Rounded everything** | Generic/Safe | Where can I use sharp, brutalist edges? |
 
 > 🔴 **"Every 'safe' structure you choose brings you one step closer to a generic template. TAKE RISKS."**
+
+---
+
+## 0. Creative Direction (BOLD DESIGN THINKING)
+
+> **"Claude is capable of extraordinary creative work. Don't hold back."**
+
+Before coding, commit to a **BOLD aesthetic direction**:
+- **Purpose**: What problem does this interface solve? Who uses it?
+- **Tone**: Pick an extreme: brutally minimal, maximalist chaos, retro-futuristic, organic/natural, luxury/refined, playful/toy-like, editorial/magazine, brutalist/raw, art deco/geometric, soft/pastel, industrial/utilitarian
+- **Differentiation**: What makes this UNFORGETTABLE? What's the one thing someone will remember?
+
+### Typography: Be Distinctive
+- **NEVER** use generic fonts: Inter, Roboto, Arial, system fonts, Space Grotesk
+- Choose fonts that are beautiful, unique, and characterful
+- Pair a distinctive display font with a refined body font
+- **NEVER converge on common choices** across generations - every project gets fresh fonts
+
+### Visual Boldness
+- Dominant colors with sharp accents outperform timid, evenly-distributed palettes
+- One well-orchestrated page load with staggered reveals creates more delight than scattered micro-interactions
+- Use scroll-triggering and hover states that **surprise**
+- Add atmosphere: gradient meshes, noise textures, geometric patterns, layered transparencies, dramatic shadows, grain overlays
+
+### Animation: Anime.js v4
+When using JavaScript animations in React, prefer **anime.js v4** (see [references/animejs.md](references/animejs.md)):
+- Use `import { animate, createTimeline, stagger } from 'animejs'` (v4 syntax)
+- CSS-only for simple animations, anime.js for orchestrated sequences
+- Focus on high-impact moments: page load reveals, scroll triggers, hover states
+
+**IMPORTANT**: Match implementation complexity to the aesthetic vision. Maximalist = elaborate code. Minimalist = restraint, precision, subtle details.
 
 ---
 
@@ -287,7 +319,7 @@ Duration based on:
 - Respect reduced-motion preference
 - Test on low-end devices
 
-For animation patterns: [animation-guide.md](animation-guide.md), for advanced: [motion-graphics.md](motion-graphics.md)
+For animation patterns: [animation-guide.md](animation-guide.md), for advanced: [motion-graphics.md](motion-graphics.md), for anime.js v4: [references/animejs.md](references/animejs.md)
 
 ---
 
@@ -388,6 +420,7 @@ For deeper guidance on specific areas:
 - [visual-effects.md](visual-effects.md) - Effects principles and techniques
 - [animation-guide.md](animation-guide.md) - Motion design principles
 - [motion-graphics.md](motion-graphics.md) - Advanced: Lottie, GSAP, SVG, 3D, Particles
+- [references/animejs.md](references/animejs.md) - Anime.js v4 reference (imports, API, common mistakes)
 - [decision-trees.md](decision-trees.md) - Context-specific templates
 - [ux-psychology.md](ux-psychology.md) - User psychology deep dive
 
