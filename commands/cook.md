@@ -20,6 +20,12 @@ Before starting, do a lightweight input check with `prompt-leverage`:
 
 Keep this preflight short. Ask only the questions that materially affect planning or implementation.
 
+Use `skill-csp-context7-research` when implementation or planning depends on:
+- exact external APIs
+- framework or library best practices
+- version-sensitive config, setup, or migration syntax
+- integrations where hallucinated docs would create rework
+
 ### Steps:
 
 1. **Request Analysis**
@@ -31,6 +37,7 @@ Keep this preflight short. Ask only the questions that materially affect plannin
     - Determine tech stack
     - Plan file structure
     - Pass the clarified/structured request forward if `prompt-leverage` was used
+    - Pass Context7 findings forward if docs research was needed
     - Create plan file and proceed to building
 
 3. **Application Building (After Approval)**
@@ -48,7 +55,7 @@ Keep this preflight short. Ask only the questions that materially affect plannin
 
 ## Usage Examples
 
-```
+```text
 /cook blog site
 /cook e-commerce app with product listing and cart
 /cook todo app

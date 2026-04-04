@@ -14,6 +14,7 @@ $ARGUMENTS
 2. **Use project-planner agent** - NOT Antigravity Agent's native Plan mode
 3. **Socratic Gate** - Use `prompt-leverage` when clarification or restructuring is needed before planning
 4. **Dynamic Naming** - Plan file named based on task
+5. **Use Context7 selectively** - consult docs only when framework/library behavior or version-specific guidance materially affects the plan
 
 ---
 
@@ -27,6 +28,11 @@ Before invoking `project-planner`, do a quick input quality check:
 - If the request is already clear, skip `prompt-leverage` and continue directly
 
 Keep this preflight lightweight. Do not block planning with unnecessary questions.
+
+Use `skill-csp-context7-research` before finalizing the plan when:
+- the request includes a named library or framework
+- the plan depends on official best practices or framework conventions
+- APIs, config, or behavior may be version-sensitive
 
 Use the `project-planner` agent with this context:
 
@@ -46,9 +52,10 @@ RULES:
 1. Follow project-planner.md Phase -1 (Context Check)
 2. Follow project-planner.md Phase 0 (Socratic Gate)
 3. If `prompt-leverage` was used, pass the clarified or structured request forward
-4. Create PLAN-{slug}.md with task breakdown
-5. DO NOT write any code files
-6. REPORT the exact file name created
+4. If Context7 was used, pass the docs-backed constraints or recommendations forward
+5. Create PLAN-{slug}.md with task breakdown
+6. DO NOT write any code files
+7. REPORT the exact file name created
 ```
 
 ---
@@ -92,7 +99,7 @@ Next steps:
 
 ## Usage
 
-```
+```text
 /csp-plan e-commerce site with cart
 /csp-plan mobile app for fitness tracking
 /csp-plan SaaS dashboard with analytics

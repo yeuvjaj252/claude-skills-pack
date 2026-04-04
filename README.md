@@ -60,9 +60,9 @@ powershell -ExecutionPolicy Bypass -File .\update.ps1
 
 | Thành phần | Số lượng | Namespace |
 |------------|----------|-----------|
-| Commands   | 21 files | `/csp-*`, `/cook` |
+| Commands   | 22 files | `/csp-*`, `/cook` |
 | Agents     | 20 files | — |
-| Skills     | 47 folders | `skill-csp-*` |
+| Skills     | 49 folders | `skill-csp-*` |
 
 > **Namespace:** Tất cả skills đều có prefix `skill-csp-` để tránh xung đột khi dùng chung với các plugin khác (ví dụ: Superpowers). Commands dùng prefix `/csp-*`.
 
@@ -76,7 +76,23 @@ CSP được thiết kế để chạy song song với [Superpowers](https://git
 | Commands | `/csp-*`, `/cook` | `/brainstorm`, `/execute-plan`, `/write-plan` |
 | Agents | 20 agents | `code-reviewer` |
 
-## Skill nội bộ mới
+## Skills nội bộ mới
+
+### `skill-csp-context7-research`
+
+Utility skill để tra cứu docs chính thức qua Context7 khi plan hoặc implementation phụ thuộc vào framework/library cụ thể.
+
+Skill này nên được dùng khi:
+- task có nhắc rõ tên framework, package, SDK hoặc library
+- config, migration, setup, hoặc API cần đúng theo version
+- user hỏi best practice chính thức
+- có nguy cơ hallucinate nếu không tra docs
+
+### Tích hợp đề xuất
+
+- `/csp-research` là command chuyên để tra docs bằng Context7
+- `/csp-plan` có thể dùng `skill-csp-context7-research` khi plan phụ thuộc framework convention hoặc version-specific behavior
+- `/cook` có thể dùng `skill-csp-context7-research` khi implementation cần exact external API hoặc config syntax
 
 ### `skill-csp-prompt-leverage`
 
@@ -115,6 +131,7 @@ Skill này không nhất thiết là command người dùng phải gọi trực 
 | `/csp-deploy` | 🚀 Quy trình deploy production: pre-flight check, deploy, verify, rollback khi cần. |
 | `/csp-devops` | 🛠️ Thiết lập CI/CD, Docker, hạ tầng và vận hành môi trường triển khai. |
 | `/csp-docs` | 📝 Soạn/cập nhật tài liệu (README, API docs, technical docs) theo chuẩn rõ ràng, dễ dùng. |
+| `/csp-research` | 🔎 Tra cứu docs framework/library bằng Context7 để giảm hallucination trước khi plan hoặc implement. |
 | `/csp-enhance` | ✨ Nâng cấp tính năng trong dự án hiện có, triển khai theo hướng iterative development. |
 | `/csp-explore` | 🧭 Khám phá codebase: cấu trúc, entry points, dependencies, data flow, pattern kiến trúc. |
 | `/csp-frontend` | 🎨 Kiến trúc frontend React/Next.js: component, state, responsive UX, accessibility, hiệu năng. |
@@ -131,4 +148,4 @@ Skill này không nhất thiết là command người dùng phải gọi trực 
 
 ## Danh sách nhanh
 
-`/csp-backend`, `/csp-brainstorm`, `/cook`, `/csp-database`, `/csp-debug`, `/csp-deploy`, `/csp-devops`, `/csp-docs`, `/csp-enhance`, `/csp-explore`, `/csp-frontend`, `/csp-plan`, `/csp-mobile`, `/csp-orchestrate`, `/csp-performance`, `/csp-preview`, `/csp-security`, `/csp-status`, `/csp-test`, `/csp-ui`, `/csp-ui-ux-pro-max`
+`/csp-backend`, `/csp-brainstorm`, `/cook`, `/csp-database`, `/csp-debug`, `/csp-deploy`, `/csp-devops`, `/csp-docs`, `/csp-enhance`, `/csp-explore`, `/csp-frontend`, `/csp-plan`, `/csp-mobile`, `/csp-orchestrate`, `/csp-performance`, `/csp-preview`, `/csp-research`, `/csp-security`, `/csp-status`, `/csp-test`, `/csp-ui`, `/csp-ui-ux-pro-max`
